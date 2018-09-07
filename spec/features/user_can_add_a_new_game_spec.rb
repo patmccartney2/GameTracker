@@ -14,12 +14,15 @@ describe 'user can add a game' do
         fill_in "game[genre]",  with: "Platformer"
         fill_in "game[release_year]",  with: 2008
         fill_in "game[system]",  with: "Xbox360"
+        fill_in "game[tag_list]", with: "Platformer, Multiplayer"
         click_on "Submit"
 
         expect(page).to have_content("Spelunky")
         expect(page).to have_content("Platformer")
         expect(page).to have_content(2008)
         expect(page).to have_content("Xbox360")
+        expect(page).to have_content("platformer")
+        expect(page).to have_content("multiplayer")
         end
       end
     end
