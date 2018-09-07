@@ -15,7 +15,7 @@ describe 'user can edit a game' do
       fill_in "game[genre]",  with: "FPS"
       fill_in "game[release_year]",  with: 2001
       fill_in "game[system]",  with: "Xbox"
-      click_on "Update Game"
+      click_on "Submit"
     end
   end
 end
