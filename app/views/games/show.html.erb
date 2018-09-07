@@ -4,4 +4,5 @@
 <p><%= @game.release_year %></p>
 <p><%= @game.created_at %></p>
 <%= link_to "<< Back to Games List", games_path %>
-<%= link_to "Delete", game_path(@game), method: :delete %>
+<%= link_to "Delete", game_path(@game), method: :delete, data: {confirm: "Really delete the article?"} %>
+<%= link_to "Edit", edit_game_path(@game) %>
