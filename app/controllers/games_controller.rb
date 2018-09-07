@@ -17,11 +17,16 @@ class GamesController < ApplicationController
     @game = Game.new(game_params)
     @game.save
 
+    flash.notice = "Game Sucessfully Added"
+
     redirect_to game_path(@game)
   end
 
   def destroy
     @game.destroy
+
+    flash.notice = "Game Sucessfully Deleted"
+
     redirect_to games_path
   end
 
@@ -30,6 +35,8 @@ class GamesController < ApplicationController
 
   def update
     @game.update(game_params)
+
+    flash.notice = "Game Sucessfully Updated"
 
     redirect_to game_path(@game)
   end

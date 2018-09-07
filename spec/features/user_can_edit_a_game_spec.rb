@@ -16,6 +16,9 @@ describe 'user can edit a game' do
       fill_in "game[release_year]",  with: 2001
       fill_in "game[system]",  with: "Xbox"
       click_on "Submit"
-    end
+
+      expect(current_path).to eq(game_path(game_1))
+      expect(page).to have_content("Game Sucessfully Updated")
+      end
   end
 end

@@ -12,6 +12,7 @@ describe 'user can delete a game' do
 
       expect(current_path).to eq(games_path)
       expect(page).to_not have_content("#{game_1.title}")
+
     end
   end
 end

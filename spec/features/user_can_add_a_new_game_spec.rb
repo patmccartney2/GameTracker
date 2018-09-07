@@ -20,7 +20,6 @@ describe 'user can add a game' do
         expect(page).to have_content("Platformer")
         expect(page).to have_content(2008)
         expect(page).to have_content("Xbox360")
-
         end
       end
     end
