@@ -1,0 +1,28 @@
+<h1>Add A New Game</h1>
+
+<%= form_for(@game) do |f| %>
+  <ul>
+  <% @game.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :genre %><br />
+    <%= f.text_area :genre %>
+  </p>
+  <p>
+    <%= f.label :system %><br />
+    <%= f.text_area :system %>
+  </p>
+  <p>
+    <%= f.label :release_year %><br />
+    <%= f.text_area :release_year %>
+  </p>
+  <p>
+    <%= f.submit "Add Game" %>
+  </p>
+<% end %>

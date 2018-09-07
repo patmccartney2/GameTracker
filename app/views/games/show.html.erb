@@ -1,0 +1,7 @@
+<h1><%= @game.title %></h1>
+<p><%= @game.genre %></p>
+<p><%= @game.system %></p>
+<p><%= @game.release_year %></p>
+<p><%= @game.created_at %></p>
+<%= link_to "<< Back to Games List", games_path %>
+<%= link_to "Delete", game_path(@game), method: :delete %>

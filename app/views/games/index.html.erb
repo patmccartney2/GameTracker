@@ -3,7 +3,7 @@
 <ul id="games">
   <% @games.each do |g| %>
     <li>
-      <%= link_to g.title, games_path(g), class: 'game-title' %>
+      <%= link_to g.title, game_path(g), class: 'game-title' %>
     </li>
   <% end %>
 </ul>
