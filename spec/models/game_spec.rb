@@ -6,5 +6,6 @@ describe Game, type: :model do
     it {should validate_presence_of(:genre)}
     it {should validate_presence_of(:release_year)}
     it {should validate_presence_of(:system)}
+    it {should have_many(:comments)}
   end
 end
