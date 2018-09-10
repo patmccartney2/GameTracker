@@ -1,4 +1,11 @@
 <h1><%= @game.title %></h1>
+<p><%= image_tag @game.image.url(:medium) %></p>
+<p>
+  Tags:
+  <% @game.tags.each do |tag| %>
+    <%= tag.name %>,
+  <% end %>
+</p>
 <p><%= @game.genre %></p>
 <p><%= @game.system %></p>
 <p><%= @game.release_year %></p>
